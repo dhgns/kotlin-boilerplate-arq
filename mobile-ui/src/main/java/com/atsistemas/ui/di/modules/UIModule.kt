@@ -11,7 +11,6 @@ val uiModule = module {
 
     factory { SplashActivity() }
 
-    single<ISplashPresenter> { SplashPresenter(get()) }
-
+    single <ISplashPresenter> { SplashPresenter(get()) }
 
 }
