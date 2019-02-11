@@ -29,21 +29,21 @@ dependencies {
 
     implementation project(':repository')
 
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    testImplementation 'junit:junit:4.12'
+    implementation projectDependencies.appCompat
+    testImplementation projectDependencies.jUnit
+
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation projectDependencies.kotlinAnnotations
 
     //rxAndroid
-    implementation mobileDependencies.rxKotlin
-    implementation mobileDependencies.rxAndroid
+    implementation projectDependencies.rxKotlin
+    implementation projectDependencies.rxAndroid
 
-    //Dependency injector
-    implementation 'org.koin:koin-android:1.0.2'
+    //Koin
+    implementation projectDependencies.koin
 
-    //ViewModel AndroidX
-    implementation 'org.koin:koin-android-viewmodel:1.0.2'
 
 }
 repositories {

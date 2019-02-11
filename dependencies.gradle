@@ -1,30 +1,43 @@
 ext {
 
+    appCompatVersion = "28.0.0"
+
     javaxAnnotationVersion = '1.0'
     javaxInjectVersion = '1'
     rxKotlinVersion = '2.1.0'
     kotlinVersion = '1.3.11'
     rxAndroidVersion = '2.0.1'
+    androidArchitectureVersion = "1.1.0"
+    koinVersion = "1.0.2"
+    okHttpVersion = "3.0.0"
 
-    dataDependencies = [
-            javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
-            javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
+    projectDependencies = [
+            appCompat:          "com.android.support:appcompat-v7:${appCompatVersion}",
+            jUnit:              "junit:junit:4.12",
             rxKotlin:           "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
-            kotlin:             "org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}"
+            rxAndroid:          "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            kotlin:             "org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}",
+            kotlinAnnotations:  "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
+            koin:               "org.koin:koin-android:${koinVersion}"
     ]
 
     domainDependencies = [
             javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
             javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
             rxKotlin:           "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
-            kotlin:             "org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}"
     ]
 
     mobileDependencies = [
-            rxKotlin:           "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
-            rxAndroid:          "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
             javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
             javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
+            koinViewModel:      "org.koin:koin-android-viewmodel:${koinVersion}",
+            kotlinAnnotation:     "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    ]
+
+    repositoryDependencies = [
+            gson:               "com.squareup.retrofit2:converter-gson:2.5.0",
+            okHttp:             "com.squareup.okhttp3:okhttp:$okHttpVersion",
+            okHttpLoggin:       "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
     ]
 
 }

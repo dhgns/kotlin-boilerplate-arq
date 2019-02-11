@@ -6,15 +6,23 @@ import com.atsistemas.ui.R
 import com.atsistemas.ui.viewmodels.ISplashPresenter
 import org.koin.android.ext.android.inject
 
+
 class SplashActivity : AppCompatActivity() {
 
-    val presenter : ISplashPresenter by inject()
+    val presenter: ISplashPresenter by inject()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        presenter.showProgress()
+        if (presenter.checkConectivity())
+            goToMain()
+
+    }
+
+    private fun goToMain() {
+
     }
 
 
