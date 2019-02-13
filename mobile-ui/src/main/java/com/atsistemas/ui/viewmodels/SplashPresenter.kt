@@ -1,17 +1,16 @@
 package com.atsistemas.ui.viewmodels
 
-import android.util.Log
-import androidx.lifecycle.ViewModel
+import android.arch.lifecycle.ViewModel
 import com.example.usecase.IAuthUseCase
 
-class SplashPresenter (val authUseCase: IAuthUseCase) : ISplashPresenter {
+
+class SplashPresenter(val authUseCase: IAuthUseCase) : ISplashPresenter, ViewModel(){
     override fun checkConectivity(): Boolean {
         return true
     }
 
     override fun showProgress() {
-        Log.w("","Presenter loaded")
-        authUseCase.doLogin()
+        return
     }
 
 }

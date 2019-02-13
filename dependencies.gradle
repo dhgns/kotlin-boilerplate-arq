@@ -10,6 +10,7 @@ ext {
     androidArchitectureVersion = "1.1.0"
     koinVersion = "1.0.2"
     okHttpVersion = "3.0.0"
+    kotlinCoroutines = "1.1.1"
 
     projectDependencies = [
             appCompat:          "com.android.support:appcompat-v7:${appCompatVersion}",
@@ -18,7 +19,8 @@ ext {
             rxAndroid:          "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
             kotlin:             "org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}",
             kotlinAnnotations:  "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
-            koin:               "org.koin:koin-android:${koinVersion}"
+            koin:               "org.koin:koin-android:${koinVersion}",
+            coroutines:         "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutines"
     ]
 
     domainDependencies = [
@@ -30,8 +32,9 @@ ext {
     mobileDependencies = [
             javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
             javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
-            koinViewModel:      "org.koin:koin-android-viewmodel:${koinVersion}",
-            kotlinAnnotation:     "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+            koinViewModel:      "org.koin:koin-android-viewmodel:$koinVersion",
+            kotlinAnnotation:   "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            kotlinViewModel:    "android.arch.lifecycle:extensions:1.1.1"
     ]
 
     repositoryDependencies = [

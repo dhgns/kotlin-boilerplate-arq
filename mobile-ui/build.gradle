@@ -27,15 +27,15 @@ dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
-    implementation 'androidx.core:core-ktx:1.1.0-alpha04'
+    implementation projectDependencies.appCompat
 
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     //Kotlin
     implementation mobileDependencies.kotlinAnnotation
+    implementation mobileDependencies.kotlinViewModel
 
     //rxAndroid
     implementation projectDependencies.rxKotlin
@@ -44,5 +44,9 @@ dependencies {
     //Koin
     implementation projectDependencies.koin
     implementation mobileDependencies.koinViewModel
+
+    //Coroutines
+    implementation projectDependencies.coroutines
+
 
 }
