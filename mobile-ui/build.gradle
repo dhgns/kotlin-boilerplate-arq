@@ -18,6 +18,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+
 }
 
 dependencies {
@@ -47,6 +53,5 @@ dependencies {
 
     //Coroutines
     implementation projectDependencies.coroutines
-
 
 }
